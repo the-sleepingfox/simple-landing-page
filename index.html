@@ -24,7 +24,7 @@
                 <img src="./assets/asset 0.png" alt="Company-logo">
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Coustomers</a></li>
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Nav  toggel -->
-            <a href="#" class="nav-toggle hover-link">
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
@@ -240,5 +240,14 @@
 
     <!-- <div class="spacer" style="height: 100vw;"></div> -->
     <script src="https://kit.fontawesome.com/594eec382c.js" crossorigin="anonymous"></script>
+    <script>
+        
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks= document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
